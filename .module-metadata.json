@@ -1,0 +1,59 @@
+{
+  "name": "auth-module",
+  "version": "0.1.0",
+  "description": "JWT + OAuth2.0 authentication module for Go",
+  "type": "library",
+  "language": "go",
+  "category": "backend",
+  "maintainers": [
+    {
+      "name": "Modsynth Team",
+      "email": "team@modsynth.dev"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modsynth/auth-module.git"
+  },
+  "dependencies": {
+    "runtime": [
+      "cache-module"
+    ],
+    "external": [
+      "github.com/golang-jwt/jwt/v5",
+      "golang.org/x/oauth2"
+    ]
+  },
+  "techStack": [
+    "Go",
+    "JWT",
+    "OAuth2.0"
+  ],
+  "features": [
+    "JWT token generation and validation",
+    "OAuth2.0 authentication flow",
+    "Token refresh mechanism",
+    "Middleware for authentication",
+    "Session management with cache integration"
+  ],
+  "api": {
+    "stability": "experimental",
+    "breaking_changes": []
+  },
+  "documentation": {
+    "readme": "README.md",
+    "examples": "examples/",
+    "godoc": true
+  },
+  "testing": {
+    "coverage_threshold": 80,
+    "frameworks": ["testing"]
+  },
+  "tags": [
+    "authentication",
+    "jwt",
+    "oauth2",
+    "security",
+    "middleware"
+  ]
+}
