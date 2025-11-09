@@ -120,9 +120,7 @@ func handleOAuthLogin(oauthManager *oauth.Manager) http.HandlerFunc {
 func handleOAuthCallback(oauthManager *oauth.Manager, jwtManager *jwt.Manager) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		code := r.URL.Query().Get("code")
-		state := r.URL.Query().Get("state")
-
-		// In production, validate state against stored value
+		_ = r.URL.Query().Get("state") // In production, validate state against stored value
 
 		token, err := oauthManager.ExchangeCode(r.Context(), "google", code)
 		if err != nil {
